@@ -11,6 +11,8 @@
     <AssemblyName>BerlinClock</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -35,7 +37,6 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,33 +44,26 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="TechTalk.SpecFlow, Version=1.9.0.77, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
-      <HintPath>packages\SpecFlow.1.9.0\lib\net35\TechTalk.SpecFlow.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BDD\BerlinClockFeatureSteps.cs" />
+    <Compile Include="ClockLights.cs" />
+    <Compile Include="DateTimeExtensions.cs" />
+    <Compile Include="Model\BaseLampSet.cs" />
+    <Compile Include="Model\HourLamps.cs" />
+    <Compile Include="Model\Interface\ILamps.cs" />
+    <Compile Include="Model\Interface\IMinuteLamps.cs" />
+    <Compile Include="Model\Interface\IHourLamps.cs" />
+    <Compile Include="Model\Interface\ISecondLamps.cs" />
+    <Compile Include="Model\MinuteLamps.cs" />
+    <Compile Include="Model\SecondLamps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="BDD\BerlinClockFeatureSteps.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BerlinClockFeatureSteps.feature</DependentUpon>
-    </Compile>
-    <Compile Include="Classes\ITimeConverter.cs" />
-    <Compile Include="Classes\TimeConverter.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
-    <None Include="BDD\BerlinClockFeatureSteps.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>BerlinClockFeatureSteps.feature.cs</LastGenOutput>
-    </None>
+    <Compile Include="Converter\ITimeConverter.cs" />
+    <Compile Include="Converter\BerlinClockTimeConverter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

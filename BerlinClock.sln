@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BerlinClock", "BerlinClock.csproj", "{0451204D-BF86-43E1-B560-FC9AC830B9A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BerlinClock.Tests", "BerlinClock.Tests\BerlinClock.Tests.csproj", "{198D19E7-500B-493D-8C04-77973087CBA7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +17,15 @@ Global
 		{0451204D-BF86-43E1-B560-FC9AC830B9A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0451204D-BF86-43E1-B560-FC9AC830B9A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0451204D-BF86-43E1-B560-FC9AC830B9A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{198D19E7-500B-493D-8C04-77973087CBA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{198D19E7-500B-493D-8C04-77973087CBA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{198D19E7-500B-493D-8C04-77973087CBA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{198D19E7-500B-493D-8C04-77973087CBA7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {16D56BB6-EFFD-49DB-AE7B-4B3AD29993D6}
 	EndGlobalSection
 EndGlobal
